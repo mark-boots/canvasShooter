@@ -25,12 +25,7 @@ const imagesSrc = {
     enemy3: "./canvasShooter/images/rene.png",
   },
 };
-// const soundsSrc = {
-//   start: new Audio("./canvasshooter/sounds/321.mp3"),
-//   destroy: new Audio("./canvasshooter/sounds/biem.mp3"),
-//   shoot: new Audio("./canvasshooter/sounds/tata.mp3"),
-//   gameOver: new Audio("./canvasshooter/sounds/godverdomme.mp3"),
-// };
+
 const soundsSrc = {
   start: document.querySelector("#audio_start"),
   destroy: document.querySelector("#audio_destroy"),
@@ -187,6 +182,7 @@ function checkCollision(obj1, obj2) {
 function endGame() {
   playSound("kill");
   startScreen.style.display = "flex";
+  startButton.style.display = "inline-block";
 }
 function removeFromArray(array, index) {
   setTimeout(() => {
@@ -229,6 +225,7 @@ function setUpEventListeners() {
   //startgame button
   startButton.addEventListener("click", () => {
     startGame();
+    startButton.style.display = "none";
   });
 
   //turn player in direction of mouse
