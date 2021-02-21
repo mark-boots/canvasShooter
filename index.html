@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131537977-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-131537977-1");
+    </script>
+    <!-- end Google Analytics -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="DumpertReeten schieten" />
+    <meta name="keywords" content="Dumpert, Game, Shooter, DumpertReeten, Sylvan, Nick, Rene"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:title" content="DumpertReeten schieten" />
+    <meta name="twitter:description" content="Schiet op je favoriete Dumpert Reeters"/>
+    <meta name="twitter:image" content=" https://mark-boots.nl/dumpertgame/canvasShooter/images/ogimage.png"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="DumpertReeten schieten" />
+    <meta property="og:description" content="Schiet op je favoriete Dumpert Reeters"/>
+    <meta property="og:image" content="https://mark-boots.nl/dumpertgame/canvasShooter/images/ogimage.png"/>
+    <meta property="og:url" content="https://mark-boots.nl/dumpertgame/index.html"/>
+
+    <title>DumpertGame</title>
+
+    <link rel="shortcut icon" href="./canvasShooter/images/favicon.png" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"></link>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./canvasShooter/lib/jsap.js"></script>
+    <script src="./canvasShooter/classes/player.js"></script>
+    <script src="./canvasShooter/classes/projectile.js"></script>
+    <script src="./canvasShooter/classes/enemy.js"></script>
+    <script src="./canvasShooter/classes/particle.js"></script>
+    <script src="./canvasShooter/main.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="canvasShooter"></canvas>
+      <div id="startscreen">
+        <div class="header">
+          <h1>DumpertReeten</h1>
+          <h3>The Game</h3>
+        </div>
+        <div class="body">
+            <div id="endscore" class="points">0</div>
+            <p>kudos</p>
+        </div>
+        <div class="footer">
+          <div id="startbutton">Start Game</div>
+        </div>
+      </div>
+
+      <div id="points">
+        kudos: <span id="livepoints">0</span><br>
+        level: <span id="livelevel">1</span>
+      </div>
+      <div id="controlls" >
+          <i title="S" class="mute fas fa-volume-mute" data-state="off"></i>
+        </div>
+      </div>
+      <div id="audio">
+        <audio id="audio_start" src="./canvasShooter/sounds/321.mp3"></audio>
+        <audio id="audio_destroy"src="./canvasShooter/sounds/biem.mp3"></audio>
+        <audio id="audio_shoot" src="./canvasShooter/sounds/tata.mp3"></audio>
+        <audio id="audio_kill" src="./canvasShooter/sounds/godverdomme.mp3"></audio>
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("./canvasShooter/images/bodybg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#container {
+  height: calc(100vh);
+  max-width: 1600px;
+  width: calc(100%);
+  max-height: 900px;
+  position: relative;
+  border: 2px solid #6c2;
+}
+#canvasShooter {
+  height: 100%;
+  width: 100%;
+}
+
+#startscreen {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+}
+#startscreen > div {
+  width: 100%;
+}
+#startscreen .header {
+  background-color: #222;
+  color: #6c2;
+  padding: 1em;
+  text-transform: uppercase;
+}
+#startscreen .body {
+  padding: 1em;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+#startscreen .body .points {
+  font-size: 5em;
+  font-weight: bold;
+}
+@media (orientation: portrait) {
+  #startscreen .body .points {
+    font-size: 3.5em !important;
+  }
+}
+#startscreen .body .points {
+  font-size: 5em;
+  font-weight: bold;
+}
+#startscreen .body p {
+  font-size: 1.5em;
+}
+
+#startscreen .footer {
+  background-color: #6c2;
+  color: #222;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1em;
+}
+
+#startscreen .footer #startbutton {
+  cursor: pointer;
+  display: inline-block;
+  transition: all 250ms ease;
+}
+#startscreen .footer #startbutton:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+#points {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#controlls {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#controlls > i[data-state="on"] {
+  color: rgb(255, 37, 37);
+}
