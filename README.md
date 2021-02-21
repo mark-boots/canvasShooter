@@ -5,7 +5,7 @@ Simple shooter game with JS on HTML5 canvas. The player is fixed in the center o
 The game is still in development, but is allready playable.
 
 demo: http://mark-boots.nl/dumpertgame
-![canvasShooter](/canvasshooter/images/ogimage.png)
+![canvasShooter](https://github.com/mark-boots/canvasShooter/blob/master/canvasShooter/images/ogimage.png?raw=true)
 
 ## Working on:
 
